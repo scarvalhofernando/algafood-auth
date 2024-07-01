@@ -1,0 +1,56 @@
+
+h
+java:S11926"FDefine a constant instead of duplicating this literal "write" 4 times.(…³¢°øÿÿÿÿ8üƒœş†2
+_
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ„œş†2
+_
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ„œş†2
+_
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ„œş†2
+_
+java:S6813)"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ„œş†2
+_
+java:S6813,"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ„œş†2
+{
+java:S3305-"^Inject this field value directly into "jwtAccessTokenConverter", the only method that uses it.(£„ä8„„œş†2
+^
+java:S1874"ARemove this use of "EnableAuthorizationServer"; it is deprecated.(Àİ„ë8…„œş†2
+i
+java:S1874"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(˜úş¤8…„œş†2
+h
+java:S18740"FRemove this use of "ClientDetailsServiceConfigurer"; it is deprecated.(è¡ïéùÿÿÿÿ8†„œş†2
+S
+java:S64374"6Revoke and change this password, as it is compromised.(˜ËÆ8‡„œş†2
+S
+java:S6437<"6Revoke and change this password, as it is compromised.(¨º¶‚8‡„œş†2
+X
+java:S6437I"6Revoke and change this password, as it is compromised.(ìãÅ˜ıÿÿÿÿ8‡„œş†2
+X
+java:S6437O"6Revoke and change this password, as it is compromised.(÷ƒ’¨üÿÿÿÿ8‡„œş†2
+o
+java:S1874S"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(³¬…£ÿÿÿÿÿ8ˆ„œş†2
+X	java:S125T"<This block of commented-out lines of code should be removed.(—¿¥Ì8™„œş†2
+k
+java:S1874Y"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ8š„œş†2
+W
+java:S1874Z":Remove this use of "TokenEnhancerChain"; it is deprecated.(‰ò8š„œş†2
+Q
+java:S1874h"5Remove this use of "ApprovalStore"; it is deprecated.(±Í‹8›„œş†2
+N
+java:S1874h"2Remove this use of "TokenStore"; it is deprecated.(±Í‹8›„œş†2
+W
+java:S1874i":Remove this use of "TokenApprovalStore"; it is deprecated.(‹üÿï8›„œş†2
+a
+java:S1874p"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(ÇË€˜øÿÿÿÿ8œ„œş†2
+\
+java:S1874q"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(Áœ¡™8œ„œş†2
+]	java:S125r"<This block of commented-out lines of code should be removed.(ÇŠƒûúÿÿÿÿ8œ„œş†2
+\
+java:S1874v":Remove this use of "KeyStoreKeyFactory"; it is deprecated.(ÔÛ°‰ûÿÿÿÿ8„œş†2
+X	java:S125~"<This block of commented-out lines of code should be removed.(”÷Ö8„œş†2
+R
+java:S1874‚"4Remove this use of "TokenGranter"; it is deprecated.(§›å8„œş†2
+l
+java:S1874‚"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(§›å8„œş†2
+`
+java:S1874Š"=Remove this use of "CompositeTokenGranter"; it is deprecated.(ü‹›˜øÿÿÿÿ8„œş†2

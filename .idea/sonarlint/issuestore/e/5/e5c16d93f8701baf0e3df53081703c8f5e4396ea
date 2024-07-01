@@ -1,0 +1,30 @@
+
+`	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`
+java:S1874"ERemove this use of "AuthorizationCodeTokenGranter"; it is deprecated.(ÙÏ¼ÿÿÿÿÿ
+]
+java:S1874"HRemove this use of "AuthorizationServerTokenServices"; it is deprecated.(ˆ£ó}
+W
+java:S1874"ARemove this use of "AuthorizationCodeServices"; it is deprecated.(²¼¦û
+R
+java:S1874"<Remove this use of "ClientDetailsService"; it is deprecated.(²¼¦û
+R
+java:S1874"<Remove this use of "OAuth2RequestFactory"; it is deprecated.(¨Şıœ
+`
+java:S1874"ERemove this use of "AuthorizationCodeTokenGranter"; it is deprecated.(Ÿ’“ëÿÿÿÿÿ
+R
+java:S1874"<Remove this use of "OAuth2Authentication"; it is deprecated.(´ÏÖ€
+K
+java:S1874"5Remove this use of "ClientDetails"; it is deprecated.(´ÏÖ€
+J
+java:S1874"4Remove this use of "TokenRequest"; it is deprecated.(´ÏÖ€
+W
+java:S1874"<Remove this use of "OAuth2Authentication"; it is deprecated.(¿½ıÿÿÿÿ
+P
+java:S1874"5Remove this use of "OAuth2Request"; it is deprecated.(Ì…ô¬ùÿÿÿÿ
+X
+java:S1874&"=Remove this use of "InvalidGrantException"; it is deprecated.(¸Û®®ÿÿÿÿÿ
+S
+java:S1874*"=Remove this use of "InvalidGrantException"; it is deprecated.(óğÎˆ
+X
+java:S1874;"=Remove this use of "InvalidGrantException"; it is deprecated.(ÉÀªéûÿÿÿÿ
