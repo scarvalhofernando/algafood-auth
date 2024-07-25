@@ -1,4 +1,4 @@
-package com.algaworks.auth;
+package com.algaworks.core;
 
 import com.algaworks.core.AuthUser;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;

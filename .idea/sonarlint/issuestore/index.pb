@@ -3,10 +3,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 U
 %src/main/java/com/algaworks/Main.java,b\f\bf93f21e87655b5a16a622134c7becc4507a4275
-o
-?src/main/java/com/algaworks/auth/AuthorizationServerConfig.java,9\8\98d44091c8b8f6278deaa756969d72423e141bb3
-g
-7src/main/java/com/algaworks/auth/WebSecurityConfig.java,4\5\456148c327946a9356b5d7f1a8dd304d7754c5e8
 _
 /src/main/java/com/algaworks/domain/Usuario.java,a\4\a4fa80108fdf336bb96808ff8482c2426fa032a6
 i
@@ -15,9 +11,11 @@ k
 ;src/main/java/com/algaworks/core/JpaUserDetailsService.java,e\a\ea31e0f24df9e9e31f563067f92709606f4c707d
 ^
 .src/main/java/com/algaworks/core/AuthUser.java,5\3\53162cd4ee9548f2a8bcbd8cf57fe336eb549900
-w
-Gsrc/main/java/com/algaworks/auth/PkceAuthorizationCodeTokenGranter.java,e\5\e5c16d93f8701baf0e3df53081703c8f5e4396ea
+o
+?src/main/java/com/algaworks/core/AuthorizationServerConfig.java,4\4\44b51da7ed1c2e06f7cef7da3bec2fac1ea45ac2
+`
+0src/main/java/com/algaworks/core/CorsConfig.java,4\1\41addea48dfa91912177c793df03b4846f3ae05f
 k
-;src/main/java/com/algaworks/auth/JwtKeyStoreProperties.java,9\b\9b7259dd96d60193c2061995bda8335c4ec071ae
-r
-Bsrc/main/java/com/algaworks/auth/JwtCustomClaimsTokenEnhancer.java,e\2\e29278c06ad5dee7bd79f02aa3f0bf1ba929f514
+;src/main/java/com/algaworks/core/JwtKeyStoreProperties.java,f\d\fd9601f7fe0b284ead17e635e4fa602ec4636481
+f
+6src/main/java/com/algaworks/core/JwkSetController.java,3\c\3cd32a3de4482ddadfafe38f019f0a7e2fc22844

@@ -1,9 +1,12 @@
-package com.algaworks.auth;
+package com.algaworks.core;
 
+import com.nimbusds.jose.JWEAlgorithm;
+import com.nimbusds.jose.jwk.JWKSet;
+import com.nimbusds.jose.jwk.KeyUse;
+import com.nimbusds.jose.jwk.RSAKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,13 +24,15 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
-import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
+import javax.sql.DataSource;
+import java.security.KeyPair;
+import java.security.interfaces.RSAPublicKey;
 import java.util.Arrays;
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -44,39 +49,44 @@ public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAda
     @Autowired
     private JwtKeyStoreProperties jwtKeyStoreProperties;
 
+    @Autowired
+    private DataSource dataSource;
+
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients
-                .inMemory()
-                .withClient("algafood-web")
-                .secret(passwordEncoder.encode("web123"))
-                .authorizedGrantTypes("password", "refresh_token")
-                .scopes("write", "read")
-                .accessTokenValiditySeconds(6 * 60 * 60)// 6 horas
-                .refreshTokenValiditySeconds(60 * 24 * 60 * 60) // 60 dias
+        clients.jdbc(dataSource);
 
-                .and()
-                .withClient("foodanalytics")
-                .secret(passwordEncoder.encode("food123"))
-                .authorizedGrantTypes("authorization_code")
-                .scopes("write", "read")
-                .redirectUris("http://www.foodanalytics.local:8082")
 
-                .and()
-                .withClient("webadmin")
-                .authorizedGrantTypes("implicit")
-                .scopes("write", "read")
-                .redirectUris("http://aplicacao-cliente")
-
-                .and()
-                .withClient("faturamento")
-                .secret(passwordEncoder.encode("faturamento123"))
-                .authorizedGrantTypes("client_credentials")
-                .scopes("write", "read")
-
-                .and()
-                .withClient("checktoken")
-                .secret(passwordEncoder.encode("check123"));
+//                .inMemory()
+//                .withClient("algafood-web")
+//                .secret(passwordEncoder.encode("web123"))
+//                .authorizedGrantTypes("password", "refresh_token")
+//                .scopes("WRITE", "READ")
+//                .accessTokenValiditySeconds(6 * 60 * 60)// 6 horas
+//                .refreshTokenValiditySeconds(60 * 24 * 60 * 60) // 60 dias
+//
+//                .and()
+//                .withClient("foodanalytics")
+//                .secret(passwordEncoder.encode("food123"))
+//                .authorizedGrantTypes("authorization_code")
+//                .scopes("WRITE", "READ")
+//                .redirectUris("http://www.foodanalytics.local:8082")
+//
+//                .and()
+//                .withClient("webadmin")
+//                .authorizedGrantTypes("implicit")
+//                .scopes("WRITE", "READ")
+//                .redirectUris("http://aplicacao-cliente")
+//
+//                .and()
+//                .withClient("faturamento")
+//                .secret(passwordEncoder.encode("faturamento123"))
+//                .authorizedGrantTypes("client_credentials")
+//                .scopes("WRITE", "READ")
+//
+//                .and()
+//                .withClient("checktoken")
+//                .secret(passwordEncoder.encode("check123"));
     }
 
     @Override
@@ -101,7 +111,7 @@ public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAda
                 .tokenGranter(tokenGranter(endpoints));
     }
 
-    private ApprovalStore approvalStore(TokenStore tokenStore){
+    private ApprovalStore approvalStore(TokenStore tokenStore) {
         var approvalStore = new TokenApprovalStore();
         approvalStore.setTokenStore(tokenStore);
 
@@ -109,18 +119,29 @@ public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAda
     }
 
     @Bean
-    public JwtAccessTokenConverter jwtAccessTokenConverter(){
-        var jwtAccessTokenConverter = new JwtAccessTokenConverter();
-//        jwtAccessTokenConverter.setSigningKey("algaworks");
-        var jksResource = new ClassPathResource(jwtKeyStoreProperties.getPath());
-        var keyStorePass = jwtKeyStoreProperties.getPassword();
-        var keyPairAlias = jwtKeyStoreProperties.getKeypairAlias();
-        var keyStoreKeyFactory = new KeyStoreKeyFactory(jksResource, keyStorePass.toCharArray());
-        var keyPair = keyStoreKeyFactory.getKeyPair(keyPairAlias);
+    public JWKSet jwkSet() {
+        RSAKey.Builder builder = new RSAKey.Builder((RSAPublicKey) keyPair().getPublic())
+                .keyUse(KeyUse.SIGNATURE)
+                .algorithm(JWEAlgorithm.RSA_OAEP_256)
+                .keyID("algafood-key-id");
+        return new JWKSet(builder.build());
+    }
 
-        jwtAccessTokenConverter.setKeyPair(keyPair);
+    @Bean
+    public JwtAccessTokenConverter jwtAccessTokenConverter() {
+        var jwtAccessTokenConverter = new JwtAccessTokenConverter();
+        jwtAccessTokenConverter.setKeyPair(keyPair());
 
         return jwtAccessTokenConverter;
+    }
+
+    private KeyPair keyPair() {
+        var keyStorePass = jwtKeyStoreProperties.getPassword();
+        var keyPairAlias = jwtKeyStoreProperties.getKeypairAlias();
+
+        var keyStoreKeyFactory = new KeyStoreKeyFactory(
+                jwtKeyStoreProperties.getJksLocation(), keyStorePass.toCharArray());
+        var keyPair = keyStoreKeyFactory.getKeyPair(keyPairAlias);
     }
 
 //    private TokenStore redisTokenStore() {

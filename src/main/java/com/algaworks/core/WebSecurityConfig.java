@@ -1,4 +1,4 @@
-package com.algaworks.auth;
+package com.algaworks.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

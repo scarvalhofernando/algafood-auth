@@ -1,0 +1,50 @@
+
+…
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8 İšÚ2J$f690aa78-c2c6-417d-bfd3-640e98b54152
+…
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8 İšÚ2J$56f00d12-91b2-476c-8acc-81bee17d6b16
+…
+java:S6813+"BRemove this field injection and use constructor injection instead.(êæÄŞ8 İšÚ2J$a4863f68-cc4a-49cf-a2f5-1e492646c5c0
+…
+java:S6813."BRemove this field injection and use constructor injection instead.(êæÄŞ8 İšÚ2J$1d071156-779b-4654-85a5-704cbdd3624a
+…
+java:S68131"BRemove this field injection and use constructor injection instead.(êæÄŞ8 İšÚ2J$988a070e-73cc-4bf7-b7ff-d015a18c25a3
+…
+java:S68134"BRemove this field injection and use constructor injection instead.(êæÄŞ8 İšÚ2J$4b8fc7c8-b75b-4b0e-8ff7-6b1fedd747a4
+„
+java:S1874""ARemove this use of "EnableAuthorizationServer"; it is deprecated.(Àİ„ë8¢İšÚ2J$b78d090f-aa67-43d9-bcb2-57c57e6e9ade
+
+java:S1874#"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(˜úş¤8¢İšÚ2J$558be74f-3591-4ec0-b0cb-32d0d29cbac9
+
+java:S18748"FRemove this use of "ClientDetailsServiceConfigurer"; it is deprecated.(è¡ïéùÿÿÿÿ8£İšÚ2J$f0203f9d-2309-47a1-a249-5edc55de3656
+~	java:S125Y"<This block of commented-out lines of code should be removed.(¸ù’¸8¥İšÚ2J$af7db12c-7d79-447f-9d1f-cbb5461e63ad
+•
+java:S1874]"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(³¬…£ÿÿÿÿÿ8¥İšÚ2J$2aaa1554-0306-431b-8eb8-053ca686199e
+~	java:S125^"<This block of commented-out lines of code should be removed.(—¿¥Ì8¥İšÚ2J$40c51b7f-d707-4312-ad17-09b836fa36da
+‘
+java:S1874c"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ8¦İšÚ2J$86445dad-13d4-4eb9-86d8-1c543e768b7b
+}
+java:S1874d":Remove this use of "TokenEnhancerChain"; it is deprecated.(‰ò8¦İšÚ2J$241824e7-6b4b-47cf-96cf-3f8b94fa3fa1
+w
+java:S1874r"5Remove this use of "ApprovalStore"; it is deprecated.(±Í‹8§İšÚ2J$cca7b9da-aafa-4a98-aff4-2d66e48f82fa
+t
+java:S1874r"2Remove this use of "TokenStore"; it is deprecated.(±Í‹8§İšÚ2J$f54e2436-0575-443e-95ff-ffc22f70cc9a
+}
+java:S1874s":Remove this use of "TokenApprovalStore"; it is deprecated.(‹üÿï8§İšÚ2J$5d915e40-65b6-4ab1-bda9-8a9caed46e6a
+ˆ
+java:S1874ƒ"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(ÇË€˜øÿÿÿÿ8ªİšÚ2J$4a38cc08-cf29-4295-aea0-09453ba83b79
+ƒ
+java:S1874„"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(Áœ¡™8ªİšÚ2J$5884980b-12b9-4c25-ae7a-ab99828b321f
+
+java:S1854";Remove this useless assignment to local variable "keyPair".(˜é¢š8«İšÚ2J$eabaa68a-d1bd-4b20-b153-5903827dcb8d
+ƒ
+java:S1874":Remove this use of "KeyStoreKeyFactory"; it is deprecated.(ù«²Æûÿÿÿÿ8¬İšÚ2J$16d8b2a1-dd94-4e43-8a1a-d2f48dad26c6
+p
+java:S1481",Remove this unused "keyPair" local variable.(˜é¢š8¬İšÚ2J$f4866cac-c4b7-4511-b2f7-7fb627335297
+	java:S125“"<This block of commented-out lines of code should be removed.(”÷Ö8­İšÚ2J$f128b790-1c41-4716-97f8-7c59cc2cabe1
+x
+java:S1874—"4Remove this use of "TokenGranter"; it is deprecated.(§›å8­İšÚ2J$08502cc3-9980-426d-aa00-af89d3bd34a3
+’
+java:S1874—"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(§›å8­İšÚ2J$04e3dc0e-6fef-41db-9d66-ce4116c2ea83
+†
+java:S1874Ÿ"=Remove this use of "CompositeTokenGranter"; it is deprecated.(ü‹›˜øÿÿÿÿ8­İšÚ2J$2e85aa2a-4e18-4e64-bd78-301d2f6624e8

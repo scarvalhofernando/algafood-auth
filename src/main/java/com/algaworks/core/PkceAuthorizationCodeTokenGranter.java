@@ -1,4 +1,4 @@
-package com.algaworks.auth;// Solução baseada em: https://github.com/spring-projects/spring-security-oauth/pull/675/files
+package com.algaworks.core;// Solução baseada em: https://github.com/spring-projects/spring-security-oauth/pull/675/files
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
